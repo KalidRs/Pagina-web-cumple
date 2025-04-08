@@ -1,0 +1,36 @@
+# 🔐 Ignorar archivos de configuración sensibles
+.env
+.env.local
+.env.*.local
+
+# ⛔ Node.js (backend y frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# 🏗️ Build (para Vite y otros)
+dist/
+build/
+
+# 🧪 Logs temporales
+*.log
+
+# 💻 Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# 📸 IDEs y editores
+.vscode/
+.idea/
+*.swp
+
+# 💥 Evita errores de sistema
+*.pid
+*.seed
+*.pid.lock
+
+# 💽 Output de Render o Vercel
+.vercel/
+.render/

@@ -1,0 +1,533 @@
+/* 🎨 Fondo con tema de ranitas */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #a8e6cf, #56c596);
+  color: #2c3e50;
+  text-align: center;
+  overflow-x: hidden; /* Evita desbordamiento lateral */
+}
+
+/* 🐸 Contenedor del mensaje */
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centra todo horizontalmente */
+  min-height: 100vh;
+  padding: 10px;
+  width: 95%; /* Ocupa todo el ancho */
+  position: relative;
+}
+
+.corazon-img {
+  width: 150px; /* Tamaño fijo */
+  max-width: 100%; /* No crece más que su tamaño original */
+  height: auto; 
+}
+
+/* 🌿 Estilo de la tarjeta con marco */
+.message-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 5px solid #4caf50;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Tamaño máximo en pantallas grandes */
+  width: 90%; /* Se adapta en móviles */
+  text-align: center;
+  position: relative;
+  margin: 0 auto; /* Asegura el centrado */
+}
+
+/* 🔹 Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .message-box {
+    width: 87%; /* Reduce el ancho en móviles */
+    padding: 20px;
+  }
+}
+
+/* 🎉 Título con sombra y efecto 3D */
+.message-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c5d3f;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  transform: scale(0.9);
+  animation: popIn 0.8s ease-out forwards;
+}
+
+/* 💌 Subtítulo con efecto */
+.message-subtitle {
+  font-size: 1.5rem;
+  color: #3e8e41;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards 0.5s;
+}
+
+/* 🐸 Botón decorado */
+.message-button {
+  background-color: #77dd77;
+  color: #2c3e50;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1s;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border: 3px solid #3e8e41;
+}
+
+.message-button:hover {
+  background-color: #4caf50;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* 🟢 Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 📸 Contenedor del carrusel */
+.carousel-container {
+  text-align: center;
+  position: relative;
+}
+
+/* 🎨 Marco de ranita (ligeramente más pequeño) */
+.frog-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 340px; /* Reducido un poco */
+  height: 440px; /* Un poco más bajo */
+  background: #77dd77;
+  border-radius: 45px;
+  padding: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  border: 4px solid #3e8e41;
+}
+
+/* 🐸 Ojos de la ranita */
+.frog-eye {
+  position: absolute;
+  top: -22px;
+  width: 40px;
+  height: 40px;
+  background: #77dd77;
+  border-radius: 50%;
+  border: 3px solid #3e8e41;
+}
+
+.frog-eye.left-eye {
+  left: 20%;
+}
+
+.frog-eye.right-eye {
+  right: 20%;
+}
+
+/* 🔵 Pupilas */
+.frog-eye::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: black;
+  border-radius: 50%;
+  top: 12px;
+  left: 14px;
+}
+
+/* 📷 Imagen dentro del marco (ligeramente más pequeña) */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 300px; /* Un poco más bajo */
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 🔁 Botones del carrusel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.carousel-btn.left {
+  left: 6px;
+}
+
+.carousel-btn.right {
+  right: 6px;
+}
+
+/* 🐸 Boca de la ranita (ligeramente más pequeña) */
+.frog-mouth {
+  position: absolute;
+  bottom: -20px;
+  width: 120px;
+  height: 40px;
+  background: #3e8e41;
+  border-radius: 50px;
+}
+
+/* 📌 Ajustes específicos para teléfonos más pequeños */
+@media (max-width: 480px) {
+  .frog-frame {
+    width: 95%;
+    max-width: 300px;
+    height: 420px;
+  }
+
+  .frog-eye {
+    width: 38px;
+    height: 38px;
+    top: -18px;
+  }
+
+  .carousel {
+    max-width: 260px;
+    height: 310px;
+  }
+
+  .carousel-btn {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .frog-mouth {
+    width: 110px;
+    height: 35px;
+  }
+}
+
+/* 📜 Contenedor de la carta con más espacio */
+.letter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1vh;
+  margin-top: 4vh; /* Agrega espacio hacia arriba */
+  margin-bottom: 4vh; /* Agrega espacio hacia abajo */
+}
+
+/* 📝 Diseño de la carta */
+.letter-paper {
+  background: #fdf3e7; /* Color papel suave */
+  border: 4px solid #d4a373; /* Borde color dorado suave */
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 80%; /* Reduce el ancho máximo */
+  width: 300px; /* Tamaño más pequeño en móviles */
+  margin: 0 auto; /* Centra el elemento */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+}
+
+/* 💌 Estilo del título de la carta */
+.letter-title {
+  font-size: 1.8rem;
+  color: #a0522d;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ✨ Estilo del texto */
+.letter-text {
+  font-size: 1.2rem;
+  color: #5a3e36;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* ❤️ Firma */
+.letter-signature {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c04040;
+}
+
+/* 🏠 Grid de comentarios */
+.comments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  max-width: 90%;
+  margin: auto;
+}
+
+/* 📝 Tarjeta de comentario con un diseño diferente */
+.comment-card {
+  background: linear-gradient(135deg, #a8e6cf, #dcedc1); /* Tonos verdes suaves */
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🌟 Efecto de sombra al pasar el mouse */
+.comment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎭 Header del comentario con fondo */
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+
+
+/* 💬 Texto del comentario */
+.comment-text {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 12px 0;
+  line-height: 1.4;
+  font-style: italic;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-height: 3.6em; /* Ajusta según el número de líneas visibles */
+  transition: max-height 0.3s ease;
+}
+
+.comment-text.expanded {
+  white-space: normal;
+  max-height: none;
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-decoration: underline;
+}
+
+.expand-button:hover {
+  color: #000000;
+}
+
+/* 📅 Fecha del comentario con menos importancia */
+.comment-date {
+  font-size: 0.8rem;
+  color: #000000;
+  text-align: right;
+  opacity: 0.8;
+}
+
+/* ✨ Burbuja decorativa */
+.comment-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+
+/* FORMULARIO */
+
+/* 🌿 Contenedor del formulario */
+.form-container {
+  text-align: center;
+  padding: 60px 20px 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* 📝 Título más grande */
+.form-container h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* 🧸 Estilo del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fefefe;
+  padding: 40px;
+  border-radius: 20px;
+  border: 4px solid #77dd77;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ Inputs más claros y bonitos */
+input, textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #b2dfdb;
+  background-color: #ffffff;
+  color: #2c3e50;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999999;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #56c596;
+}
+
+/* 💬 Área de texto */
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* 🐸 Botón de envío */
+button {
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* 🎉 Mensaje de éxito */
+.form-success {
+  color: #2c5d3f;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  animation: pop 0.4s ease-out;
+}
+
+/* 🎈 Animación al enviar */
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 🎉 Modal de confirmación */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-popup {
+  background: #fffbe6;
+  border: 3px solid #fdd835;
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: popIn 0.5s ease-out;
+}
+
+.modal-popup h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.modal-popup p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+@keyframes confetti-fall {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 0 100vh, 0 100vh; }
+}
+
+

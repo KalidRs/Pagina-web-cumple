@@ -13,6 +13,10 @@ h1, h2, h3, .message-title, .letter-title {
   font-family: 'Pacifico', cursive;
 }
 
+p {
+  font-family: 'Merriweather', serif;
+}
+
 /* 🐸 Contenedor del mensaje */
 .message-container {
   display: flex;

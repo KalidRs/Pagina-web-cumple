@@ -34,7 +34,7 @@ const Comments = () => {
 
   return (  
     <div className="comments-section">
-      <h2 className="comments-title">💌 Mensajes de Felicitaciones 🎉</h2>
+      <h2 className="comments-title">💌 Mensajes de Felicitaciones 💌</h2>
       <div className="comments-grid">
         {comments.length > 0 ? (
           comments.map((comment) => (

@@ -21,7 +21,7 @@ const Message = () => {
       >
         {/* 💖 Imagen de ranita */}
         <motion.img
-          src="/images/corazon.png"
+          src="/images/sobre.png"
           alt="Ranita feliz"
           className="corazon-img"
           initial={{ opacity: 0, scale: 0.8 }}

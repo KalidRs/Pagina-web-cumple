@@ -12,13 +12,6 @@ const Message = () => {
 
   return (
     <div className="message-container">
-      {/* 🎈 Burbujas decorativas */}
-      <div className="bubbles">
-        {[...Array(10)].map((_, i) => (
-          <span key={i}></span>
-        ))}
-      </div>
-
       {/* 🐸 Tarjeta con el mensaje */}
       <motion.div
         className="message-box"
@@ -36,19 +29,19 @@ const Message = () => {
           transition={{ duration: 1 }}
         />
 
-        
         <motion.h1 className="message-title">
-        Feliz Cumpleaños Bonita
+          Feliz Cumpleaños Bonita
         </motion.h1>
 
         <motion.p className="message-subtitle">
-        Hoy realmente es un dia muy importante y no solo para ti, si no a todos los que te amamos 
-        y por ello te hice esta pequeña pagina para recordarte que contigo quiero estar y que contigo quiero todo lo que un hombre
-        puede pedir, el ser una familia de 2
+          Hoy celebramos el día en que el mundo se volvió un poquito más bonito, porque tú llegaste.
+          No hay palabras suficientes para agradecer que estés en mi vida.
+          Esta página es solo una forma de decirte que cada día contigo es un regalo,
+          y que no hay lugar en el que prefiera estar que a tu lado.
         </motion.p>
 
         <motion.a href="#carousel" className="message-button" onClick={handleScroll}>
-          Nuestras pequeña historia
+          Nuestras Fotos
         </motion.a>
       </motion.div>
     </div>

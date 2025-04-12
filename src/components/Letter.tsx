@@ -9,31 +9,34 @@ const Letter = () => {
   });
 
   return (
-    <motion.div 
+    <motion.div
       ref={ref}
       className="letter-container"
       initial={{ scaleY: 0, opacity: 0 }}
       animate={inView ? { scaleY: 1, opacity: 1 } : {}}
       transition={{ duration: 1, ease: "easeInOut" }}
     >
-      <motion.div 
+      <motion.div
         className="letter-paper"
         initial={{ y: -50, opacity: 0 }}
         animate={inView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <h2 className="letter-title">Para la mujer mas hermosa</h2>
+        <h2 className="letter-title">Para la mujer más hermosa</h2>
         <p className="letter-text">
-          Cariño mio, cada día a tu lado es un regalo a mi vida. 
-          Quiero que esta página sea un pequeño detalle que te haga sonreír,
-          como tu me has hecho sonreir desde el momento que te conoci
+          No hay palabras que le hagan justicia a todo lo que eres.
+          Eres la calma que abraza, la alegría que contagia, la ternura que llena todo.
+          Desde que llegaste, el mundo tiene más luz, más razones, más amor.
         </p>
         <p className="letter-text">
-          Gracias por cada risa, cada abrazo y cada momento juntos.
-          Tengo tantos sueños que quiero cumplir junto a ti, en esta vida y las que falten
+          Esta carta es apenas un suspiro de todo lo que siento por ti.
+          Porque contigo aprendí que el amor verdadero no es perfecto,
+          pero sí es real, paciente, y siempre encuentra su manera de abrazar sin soltar.
+          Quiero estar a tu lado hoy, mañana y en cada uno de mis sueños.
         </p>
-        <p className="letter-signature">De: kalid❤️</p>
-      </motion.div>
+
+        <p className="letter-signature">Siempre tuyo, Kalid 💖</p>
+        </motion.div>
     </motion.div>
   );
 };
